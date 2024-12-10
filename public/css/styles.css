@@ -1,0 +1,364 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Estilo general del botón */
+.menu-button {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  /* Líneas del botón */
+  .menu-button span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #333;
+      border-radius: 2px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    
+    /* Cambio de color al pasar el cursor */
+    .menu-button:hover span {
+      background-color: #555;
+    }
+    
+    /* oye jack loera aqui pon el estilo de el boton tipo hambirguesa = */
+    /* Estilo general del botón tipo hamburguesa */
+    /* Estilos generales */
+    
+    
+    /* Estilo general del botón tipo hamburguesa */
+    .menu-button {
+        width: 35px; /* Tamaño reducido para mejorar la apariencia */
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative; /* Para posicionar las líneas correctamente */
+        z-index: 999; /* Asegura que el botón esté por encima de otros elementos */
+    }
+    
+    .menu-button span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #fff; /* Color blanco para el contraste */
+        border-radius: 2px;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    
+    /* Efecto de hover */
+    .menu-button:hover span {
+        background-color: #00bcd4; /* Cambio de color al pasar el ratón */
+    }
+    
+    /* Cuando el menú está activo, se transforman las líneas */
+    .menu-button.open span:nth-child(1) {
+        transform: translateY(13px) rotate(45deg); /* Línea superior */
+    }
+    
+    .menu-button.open span:nth-child(2) {
+        opacity: 0; /* Oculta la línea del medio */
+    }
+    
+    .menu-button.open span:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg); /* Línea inferior */
+    }
+    
+    /* Estilo para la navegación */
+    /* Asegurar un diseño correcto del navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* Para alinear el logo y el botón */
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        position: relative; /* Para que el menú se posicione relativo a este */
+    }
+    
+    /* Estilo del logo */
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    /* Menú de navegación */
+    .menu {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .menu li {
+        margin: 0;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s;
+    }
+    
+    .menu a:hover {
+        color: #00bcd4;
+    }
+
+@media (min-width: 769px) {
+        .menu-button {
+            display: none; /* Oculta el botón hamburguesa */
+        }
+    }
+
+      
+
+/* Menú de navegación para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    /* Ocultar el menú inicialmente */
+    .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 998; /* Menor que el botón */
+    }
+
+    /* Mostrar menú cuando está activo */
+    .menu.active {
+        display: flex;
+    }
+}
+
+/* Botón hamburguesa abierto */
+.menu-button.open span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.menu-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.open span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+
+/* Otros estilos... */
+
+
+header {
+    background-color: #333333;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444444;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #e0e0e0;
+}
+/* Estilos para centrar el texto y cambiar el color */
+#quienes-somos, #desarrollo-personalizado, #diseno-responsive, #landing-pages-apps {
+    text-align: center; /* Centrar el texto */
+    color: #000000; /* Cambiar color del texto a negro */
+}
+
+#quienes-somos p, #desarrollo-personalizado p, #diseno-responsive p, #landing-pages-apps p {
+    color: #000000; /* Cambiar el color de los párrafos a negro */
+}
+
+
+
+/* Estilos para el formulario */
+form {
+    width: 350px;
+    margin: 50px auto;
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #b0b0b0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #555;
+    background-color: #3a3a3a;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: #e0e0e0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="reset"] {
+    background-color: #555555;
+}
+
+button:hover {
+    background-color: #606060;
+}
+.botoncontacto {
+    display: grid;
+    place-items: center; /* Centrar horizontal y verticalmente */
+    height: 100vh; /* Opcional, para centrar verticalmente también */
+}
+
+/* Estilos para enlaces con efecto de sombra (botón) */
+.shadow-effect {
+    
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff; /* Color base del botón */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+    display: inline-block; /* Asegura que el enlace se comporte como un botón */
+}
+
+.shadow-effect:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+}
+
+.numer {
+    text-decoration: none;
+    color: #9a9a9a;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.numer:hover {
+    color: #cccccc;
+}
+
+/* Estilos para el footer */
+.ultimo {
+    background-color: white; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espacio alrededor del texto */
+    font-size: 14px; /* Tamaño del texto */
+    border-top: 1px solid #ccc; /* Línea superior para separar el footer */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave en la parte superior */
+    margin-top: 30px; /* Espacio antes del footer */
+}
+
+/* Fondo blanco para la sección del footer */
+section {
+    background-color: white; /* Fondo blanco para la sección */
+    padding: 20px 0; /* Espacio alrededor del contenido */
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    .carrusel {
+        width: 100%; /* Ajusta el carrusel al ancho de la pantalla */
+    }
+
+    .imagenes img {
+        width: 100%; /* Asegura que las imágenes se ajusten al tamaño del carrusel */
+        height: auto; /* Mantiene la proporción de las imágenes */
+    }
+}
+
+/* Estilos para el carrusel de imágenes */
+.carrusel {
+    position: relative;
+    width: 300px; /* Ancho fijo, ajusta según sea necesario */
+    height: 300px; /* Alto fijo, ajusta según sea necesario */
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 20px auto; /* Centramos el carrusel */
+}
+
+.imagenes {
+    display: flex;
+    animation: slide 8s infinite; /* Cambia la duración para ajustar la velocidad */
+}
+
+.imagenes img {
+    width: 300px; /* Ancho de las imágenes, ajusta según sea necesario */
+    height: 300px; /* Alto de las imágenes, ajusta según sea necesario */
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+

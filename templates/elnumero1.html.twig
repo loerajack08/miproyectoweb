@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <title>Loera Soluciones Web SA. de C.V.</title>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo"></div>
+    <div class="menu-button" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="menu" id="menu">
+        <li><a href="{{ path('serviciosextra') }}">Soporte</a></li>
+        <li><a href="{{ path('missocios') }}">Diseño grafico</a></li>
+        <li><a href="{{ path('nuestraspaginas') }}">Nuestras Páginas</a></li>
+        <li><a href="{{ path('loscostos') }}">Costos</a></li>
+    </ul>
+</nav>
+
+<main>
+    {% block body %}{% endblock %}
+</main>
+
+<script src="{{ asset('js/script.js') }}"></script>
+
+
+    <div>
+        <h2>Loera Soluciones Web SA. de C.V.</h2>
+    </div>
+
+    <header>
+        <h2 class="title">Somos la solución a tu empresa</h2> <!-- Corrige "clas" a "class" -->
+    </header>
+
+    <div class="carrusel">
+        <div class="imagenes">
+            <img src="{{ asset('misimagenes/Imagen de WhatsApp 2024-10-31 a las 14.29.52_c0cbe6db.jpg') }}" alt="Imagen1">
+            <img src="{{ asset('misimagenes/Imagen de WhatsApp 2024-10-31 a las 14.29.52_87505094.jpg') }}" alt="Imagen2">
+            <img src="{{ asset('misimagenes/Imagen de WhatsApp 2024-10-31 a las 14.30.59_b11da115.jpg') }}" alt="Imagen3">       
+            
+        </div> 
+    </div>
+
+    <main>
+        <!-- Sección de "Quiénes somos" -->
+        <section id="quienes-somos">
+            <h2>Quiénes Somos</h2>
+            <p>¡Bienvenido A Loera Soluciones Web S. de C.V.!<br>
+             Transformamos tu marca creando y posicionando tu Sitio web <br>
+             en Internet para potenciar su reconocimiento. Con nuestra<br>
+             trayectoria y experiencia, ofrecemos diseño responsive, autoadministrable y soporte continuo para asegurar tu éxito online.</p>
+        </section>
+
+         <!-- Sección de "Desarrollo Personalizado" -->
+         <section id="desarrollo-personalizado">
+            <h2>Desarrollo Personalizado</h2>
+            <p>Creamos sitios únicos, estéticamente atractivos <br>
+             y funcionales. Desde páginas corporativas hasta portales<br>
+              informativos, diseñamos para destacar.</p>
+        </section> 
+
+        <!-- Sección de "Diseño Responsive" -->
+        <section id="diseno-responsive">
+            <h2>Diseño Responsive</h2>
+            <p>Creación de sitios web adaptativos. Desarrollamos sitios web <br>
+             que se ajustan perfectamente a cualquier dispositivo,<br>
+             garantizando una experiencia de usuario fluida y moderna.</p>
+        </section>
+
+        <!-- Sección de "Landing Pages y Apps Web" -->
+        <section id="landing-pages-apps">
+            <h2>Landing Pages y Apps Web</h2>
+            <p>Páginas y aplicaciones que transforman<br>
+            Desarrollamos landing pages optimizadas para convertir visitantes en clientes y aplicaciones web innovadoras, enfocadas en resultados de alto impacto.</p>
+        </section>
+    </main>
+
+    <h2>Registro de Usuario</h2>
+
+   <form action="{{path('registro')  }}" method="POST" class="needs-validation" novalidate>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="numero">Número telefónico:</label>
+    <input type="tel" id="numero" name="numero" pattern="[0-9]{10}" required><br><br>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="mensajes">Mensaje:</label>
+    <textarea id="mensajes" name="mensajes" required></textarea><br><br>
+
+    <button type="submit" name="submit">Enviar</button>
+    <button type="reset" name="reset">Resetear</button>
+</form>
+   
+<div class="botoncontacto">
+
+            <p>Nuestro equipo ha recibido tu mensaje y nos pondremos en contacto contigo <br>
+             a la brevedad.Si tienes alguna consulta urgente, no dudes en llamarnos <br>
+             o enviarnos un correo directo.Mientras tanto,<br>
+             te invitamos a explorar nuestros últimos proyectos y <br>
+             conocer más sobre cómo nuestras soluciones <br>
+             digitales pueden ayudarte a potenciar tu negocio<br>
+             Desde aplicaciones web personalizadas hasta páginas<br>
+             web optimizadas, estamos aquí para llevar tu visión a la realidad.</p>
+   
+        <a href="https://wa.me/6682192407" class="shadow-effect numer">Contáctanos</a>
+
+</div>
+
+    <section>
+        <footer class="ultimo">
+            <p>&copy;Todos los derechos reservados 2024</p>
+        </footer>
+    </section>
+    
+</body>
+</html>
+
